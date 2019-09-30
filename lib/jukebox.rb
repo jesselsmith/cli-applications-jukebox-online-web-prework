@@ -10,6 +10,10 @@ def help
   puts"- exit : exits this program"
 end
 
+def invalid_input
+  puts "Invalid input, please try again"
+end
+
 def list(songs_array)
   songs_array.each_with_index do |song, i|
     puts "#{i + 1}. " + song
@@ -24,7 +28,7 @@ def play(songs_array)
   elsif response.to_i > 0 && response.to_i <= songs_array.size
     puts "Playing #{songs_array[response.to_i - 1]}"
   else
-    puts "Invalid input, please try again"
+    invalid_input
   end
 end
 
@@ -45,8 +49,9 @@ def run(songs)
       play(songs)
     when "exit"
       exit_jukebox
-    
-        
+    else
+      invalid_input
+  end
 end
 songs = [
   "Phoenix - 1901",
