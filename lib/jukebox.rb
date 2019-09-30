@@ -32,6 +32,12 @@ def exit_jukebox
   puts "Goodbye"
   
 end
+
+def run
+  prompt_user
+  input = gets.strip
+  
+end
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
