@@ -33,13 +33,19 @@ def exit_jukebox
   
 end
 
-def run
+def run(songs)
   prompt_user
   input = gets.strip
   case input
     when "help"
       help
-  when list
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    when "exit"
+      exit_jukebox
+    
         
 end
 songs = [
