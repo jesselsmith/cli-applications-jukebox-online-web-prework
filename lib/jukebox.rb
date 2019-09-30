@@ -37,7 +37,10 @@ def run
   prompt_user
   input = gets.strip
   case input
-    when
+    when "help"
+      help
+      when
+        
 end
 songs = [
   "Phoenix - 1901",
