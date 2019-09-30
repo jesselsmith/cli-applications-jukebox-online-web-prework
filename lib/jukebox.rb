@@ -38,19 +38,22 @@ def exit_jukebox
 end
 
 def run(songs)
-  prompt_user
-  input = gets.strip
-  case input
-    when "help"
-      help
-    when "list"
-      list(songs)
-    when "play"
-      play(songs)
-    when "exit"
-      exit_jukebox
-    else
-      invalid_input
+  loop do
+    prompt_user
+    input = gets.strip
+    case input
+      when "help"
+        help
+      when "list"
+        list(songs)
+      when "play"
+        play(songs)
+      when "exit"
+        exit_jukebox
+        break
+      else
+        invalid_input
+    end
   end
 end
 songs = [
